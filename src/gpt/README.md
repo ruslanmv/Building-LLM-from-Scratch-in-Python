@@ -76,7 +76,6 @@ This guide provides step-by-step instructions for setting up the necessary envir
 * The provided code demonstrates the core concepts of building a basic Transformer architecture.
 * Adapt and experiment with this code to further explore the capabilities of Transformer models.
 * Refer to the blog post for detailed explanations of the code and underlying concepts. 
-```
 
 **Remember:** 
 
