@@ -264,7 +264,7 @@ graph TD
         D --> E --> F --> G
     end
 
-    H --> I[Task-Specific Head (e.g., Classification)]
+    H --> I[Task-Specific Head e.g., Classification]
     
     style D fill:#f9f,stroke:#333,stroke-width:4px
     style E fill:#bbf,stroke:#333,stroke-width:2px
