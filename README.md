@@ -6,11 +6,12 @@ Each blog in this repository explains the underlying architecture, how to build 
 
 ## Table of Contents
 
-1. [GPT (Generative Pretrained Transformer)](#gpt)
-2. [BERT (Bidirectional Encoder Representations from Transformers)](#bert)
-3. [T5 (Text-To-Text Transfer Transformer)](#t5)
-4. [LLaMA (Large Language Model Meta AI)](#llama)
-5. [OPT (Open Pretrained Transformer)](#opt)
+1. [GPT (Generative Pretrained Transformer)](/blogs/gpt.md)
+2. [BERT (Bidirectional Encoder Representations from Transformers)](/blogs/bert.md)
+3. [T5 (Text-To-Text Transfer Transformer)](/blogs/t5.md)
+4. [LLaMA (Large Language Model Meta AI)](/blogs/llama.md)
+5. [OPT (Open Pretrained Transformer)](/blogs/opt.md)
+
 
 ---
 
