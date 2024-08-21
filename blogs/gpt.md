@@ -375,7 +375,7 @@ Here’s an example of what the generated text might look like:
 Generated Text:
 the quick brown fox jumps over the lazy dog this is an example of a small dataset for training a small dataset for training a small dataset for training a small dataset for training a small dataset for training a small dataset for training a small dataset for training a small dataset for
 ```
-
+![](assets/2024-08-21-17-07-51.png)
 While the generated text is repetitive and simple due to the small dataset, it shows that the model is successfully learning how to generate sentences based on input prompts.
 
 ---
