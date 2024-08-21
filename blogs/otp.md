@@ -306,3 +306,14 @@ graph TB
     style Transformer_Block_2 fill:#f9f,stroke:#333,stroke-width:2px
     style Transformer_Block_n fill:#f9f,stroke:#333,stroke-width:2px
 ```
+
+The diagram illustrates the key components like the input embedding, position embedding, transformer blocks (self-attention, layer normalization, feed-forward), and the final linear layer for output generation.
+
+### Explanation:
+- **Input Sequence:** The input tokenized sequence is passed to the model.
+- **Embedding Layer:** Maps each token to a high-dimensional vector.
+- **Positional Embedding:** Adds positional information to the embeddings to retain word order.
+- **Transformer Blocks:** These blocks contain the self-attention mechanism, followed by layer normalization and feed-forward networks.
+- **Linear Layer:** After passing through multiple transformer blocks, a final linear layer is used to predict the next token in the sequence.
+
+You can adjust the number of transformer blocks depending on your architecture setup. Each block consists of self-attention, layer normalization, and feed-forward layers.
