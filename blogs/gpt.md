@@ -262,11 +262,89 @@ def generate_text(model, prompt, vocab, max_len=50):
 
 ---
 
-## 6. Conclusion
 
-In this blog, we walked through how to build a basic GPT-like model from scratch in Python using PyTorch. We constructed the core Transformer architecture, trained the model on a small dataset, and implemented autoregressive text generation. Although this is a simplified version, it forms the basis for more sophisticated architectures like GPT-3 and GPT-4.
+## 7. Example Use
 
-This process gives a deeper understanding of how Transformers and GPT models work.
+In this section, we will train our GPT-like model using the dummy dataset and then use the `generate_text` function to generate text based on a prompt.
+
+### Step 1: Training the Model
+
+First, we’ll define a small dataset and train the model. This is a simplified training process, but it demonstrates how the model works.
+
+```python
+# Define a small dataset
+text = """
+The quick brown fox jumps over the lazy dog. 
+This is an example of a small dataset for training a GPT model.
+We are building a transformer-based architecture.
+"""
+vocab = build_vocab(text)
+encoded_text = encode(text, vocab)
+
+# Prepare the training data (this is token-based data)
+# Here we split the text into batches of sequences
+sequence_length = 10
+train_data = [encoded_text[i:i + sequence_length + 1] for i in range(0, len(encoded_text) - sequence_length)]
+
+# Define model hyperparameters
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+vocab_size = len(vocab)
+embed_size = 128
+num_layers = 2
+heads = 8
+dropout = 0.1
+max_length = 50
+
+# Instantiate the model
+model = GPT(vocab_size, embed_size, num_layers, heads, device, dropout, max_length).to(device)
+
+# Train the model on this small dataset
+train(model, train_data, vocab, epochs=100, lr=0.001)
+```
+
+### Step 2: Generating Text with a Prompt
+
+Once the model is trained, we can use it to generate text based on a given prompt. The `generate_text` function takes in a prompt, generates the next sequence of tokens, and converts them back into readable text.
+
+Here’s how we use it:
+
+```python
+# Define a prompt to generate text
+prompt = "The quick brown"
+
+# Generate text based on the prompt
+generated_text = generate_text(model, prompt, vocab, max_len=50)
+
+# Print the generated text
+print("Generated Text:")
+print(generated_text)
+```
+
+### Example Output
+
+After training the model, we can expect output that resembles the data in our training set. Since we trained on a small dataset, the output won’t be perfect, but it will be able to predict and generate sentences that reflect patterns in the training text.
+
+Here’s an example of what the generated text might look like:
+
+```text
+Generated Text:
+the quick brown fox jumps over the lazy dog. this is an example of a small dataset for training a gpt model we are building a transformer based architecture the quick brown fox jumps over the lazy dog.
+```
+
+While the generated text is repetitive and simple due to the small dataset, it shows that the model is successfully learning how to generate sentences based on input prompts.
+
+---
+
+## Conclusion
+
+In this tutorial, we built a basic GPT-like Transformer model from scratch, trained it on a small dataset, and generated text using autoregressive decoding. Although this model is small and simplified, it demonstrates the core principles behind GPT architectures and can be scaled up with larger datasets and more layers for better results.
+
+You can experiment by:
+- Training the model on a larger and more diverse dataset.
+- Adjusting the model’s hyperparameters (e.g., more layers, more attention heads).
+- Modifying the text generation mechanism to include techniques like beam search for better text generation quality.
+
+By understanding and building models from the ground up, we gain deeper insight into how modern language models work, giving us the foundation to develop more advanced NLP systems. Happy coding!
 
 
 ## Architecture using Mermaid syntax:
