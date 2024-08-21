@@ -52,6 +52,10 @@ This guide provides step-by-step instructions for setting up the necessary envir
      ```bash
      python gpt_model.py 
      ```
+    you will get 
+
+    ![](assets/2024-08-21-17-15-34.png)
+
 
    * **Within Jupyter Notebook:**
      * Launch Jupyter Notebook:
