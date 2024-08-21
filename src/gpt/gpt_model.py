@@ -210,3 +210,7 @@ train(model, train_data, vocab, epochs=100, lr=0.001)
 # Generating text
 prompt = "The quick brown"
 generated_text = generate_text(model, prompt, vocab, max_len=50)
+
+# Output the generated text
+print("Generated Text:")
+print(generated_text)
