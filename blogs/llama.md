@@ -283,3 +283,20 @@ graph TD;
         C3 --> C4[Add & Norm];
     end
 ```
+
+
+Here’s a diagram of the LLaMA architecture used in the blog, represented in Mermaid syntax. This diagram focuses on the main components: input embedding, positional encoding, decoder blocks with multi-head attention, feedforward networks, and output generation.
+
+
+### Explanation:
+- **Input Token Sequence**: The input tokens are passed through an embedding layer.
+- **Embedding + Positional Encoding**: Positional encodings are added to the embeddings to incorporate positional information.
+- **Decoder Blocks**: Multiple decoder blocks stacked together, each with:
+  - **Multi-Head Attention**: Handles self-attention.
+  - **Add & Norm**: Residual connections followed by layer normalization.
+  - **Feed Forward Network**: A fully connected feedforward neural network.
+  - **Add & Norm**: Another residual connection followed by normalization.
+- **Linear Layer (Vocab Projection)**: The output from the final decoder block is projected to the vocabulary size using a linear layer.
+- **Output Sequence**: The final logits, representing the output tokens.
+
+This diagram can be visualized in tools supporting Mermaid syntax.
