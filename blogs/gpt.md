@@ -346,7 +346,7 @@ and finally we can train the model with
 train(model, train_data, vocab, epochs=100, lr=0.001)
 
 ```
-![](assets/2024-08-21-17-03-39.png)
+![](assets/2024-08-21-17-10-04.png)
 ### Step 2: Generating Text with a Prompt
 
 Once the model is trained, we can use it to generate text based on a given prompt. The `generate_text` function takes in a prompt, generates the next sequence of tokens, and converts them back into readable text.
