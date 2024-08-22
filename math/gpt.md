@@ -221,4 +221,3 @@ The model continues generating tokens until the specified maximum length is reac
 In this blog post, we've explored the mathematical foundations of building a GPT model from scratch, including multi-head self-attention, positional encoding, and transformer blocks. We also demonstrated how these concepts translate into Python code and applied them to generate text.
 
 By walking through a concrete example of generating text based on a prompt, we've bridged the gap between mathematical theory and practical implementation. With this understanding, you're now ready to explore more advanced concepts in language modeling and GPT architectures!
-```
