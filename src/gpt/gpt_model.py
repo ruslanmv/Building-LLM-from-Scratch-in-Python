@@ -1,3 +1,6 @@
+# How to build a basic LLM GPT model from Scratch in Python
+#Developed by Ruslan Magana Vsevolodovna
+#ruslanmv.com
 #Step 1: Import Libraries
 import numpy as np
 import torch
